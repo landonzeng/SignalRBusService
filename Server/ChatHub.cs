@@ -61,7 +61,7 @@ namespace ServerConsole
             var toUser = OnlineUsers.FirstOrDefault(x => x.UserName == toUserName);
             var fromUser = OnlineUsers.FirstOrDefault(x => x.ConnectionId == fromConnectionId);
 
-            if (toUser != null )//&& fromUser != null)
+            if (toUser != null )
             {
                 Clients.Client(toUser.ConnectionId).receivePrivateMessage(fromUser.UserName, message);
                 //Clients.Client(toUser.ConnectionId).receivePrivateMessage(message);
