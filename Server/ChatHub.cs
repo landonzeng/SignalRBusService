@@ -39,7 +39,6 @@ namespace ServerConsole
                 OnlineUsers.Add(new UserInfo
                 {
                     ConnectionId = connnectId,
-                    //UserId = userId,
                     UserName = userName,
                     LastLoginTime = DateTime.Now
                 });
@@ -64,7 +63,6 @@ namespace ServerConsole
             if (toUser != null )
             {
                 Clients.Client(toUser.ConnectionId).receivePrivateMessage(fromUser.UserName, message);
-                //Clients.Client(toUser.ConnectionId).receivePrivateMessage(message);
             }
             else
             {
